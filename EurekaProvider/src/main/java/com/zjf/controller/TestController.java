@@ -27,8 +27,8 @@ public class TestController implements HelloInterface {
     @Autowired
     private DiscoveryClient client;
 
-    @Value("${spring.cache.redis.expiration}")
-    private Integer expiration;
+    @Value("${spring.cloud.config.test}")
+    private Integer test;
 
     private final Logger logger = LoggerFactory.getLogger(TestController.class);
 
@@ -69,6 +69,6 @@ public class TestController implements HelloInterface {
 
     @GetMapping(value = "/config/test")
     public String testConfigRefresh(){
-        return expiration+"";
+        return this.test+"";
     }
 }
