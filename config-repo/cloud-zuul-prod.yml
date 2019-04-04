@@ -1,0 +1,8 @@
+zuul:
+  routes:
+    orient-service-url:
+      path: /os-url/**
+      service-id: feign-customer
+    ribbon-service-url:
+      path: /rs-url/**
+      service-id: robbin-customer

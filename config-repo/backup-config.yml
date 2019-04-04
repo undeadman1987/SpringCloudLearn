@@ -1,0 +1,16 @@
+#用户备份config服务端配置和客户端配置,该配置不是真正要拉取的配置
+spring:
+  config:
+    #config客户端配置
+    uri: http://localhost:9005/        #Config server的uri
+    name: cloud-bus,cloud-zuul      #应用名
+    profile: dev                       #指定的环境
+    label:                              #指定分支
+    fail-fast: true
+    #git服务器配置
+    server:
+      git:
+        uri: https://github.com/undeadman1987/spring-cloud-learn.git
+        search-paths: config-repo
+        username: username  #账号密码
+        password: password

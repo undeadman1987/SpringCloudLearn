@@ -1,0 +1,33 @@
+server:
+  port: 9005
+
+spring:
+  application:
+    name: config-server
+#  profiles:
+#    active: native
+  cloud:
+#    bus:
+#      enabled: true
+#      trace:
+#        enabled: true
+    config:
+      server:
+#        native:
+#          search-locations: classpath:properties/
+        git:
+          uri: https://github.com/undeadman1987/spring-cloud-learn.git
+          search-paths: config-repo
+          username: username
+          password: password
+  rabbitmq:
+    host: 192.168.80.132
+    port: 5672
+    password: admin
+    username: admin
+#开放刷新配置的endpoint
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

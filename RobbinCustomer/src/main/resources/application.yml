@@ -1,0 +1,10 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: robbin-customer
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream    #暴露监控的endpoint
