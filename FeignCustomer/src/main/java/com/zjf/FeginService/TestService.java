@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @Description:
  * @Date: Created on 2019/3/28 16:44
  */
-@FeignClient(value = "learn-service")
+@FeignClient(value = "provider-service")
 public interface TestService extends HelloInterface {
 
     @RequestMapping(value = "/test",method = RequestMethod.GET)

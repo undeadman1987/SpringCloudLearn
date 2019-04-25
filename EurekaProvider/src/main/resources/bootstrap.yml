@@ -2,7 +2,7 @@ spring:
   cloud:
     config:
       uri: http://localhost:9005/        #Config server的uri
-      name: cloud-bus            #应用名
+      name: cloud-common,cloud-bus            #应用名
       profile: dev                       #指定的环境
       label:                              #指定分支
       fail-fast: true

@@ -26,7 +26,7 @@ public class CacheCommand extends HystrixCommand<Integer> {
 
     @Override
     protected Integer run() throws Exception {
-        return restTemplate.getForEntity("http://learn-service/test/cache", Integer.class).getBody();
+        return restTemplate.getForEntity("http://provider-service/test/cache", Integer.class).getBody();
     }
 
     @Override

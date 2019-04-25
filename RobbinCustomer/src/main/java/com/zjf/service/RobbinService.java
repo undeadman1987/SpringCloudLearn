@@ -29,7 +29,7 @@ public class RobbinService {
 
     @HystrixCommand(fallbackMethod = "testServerFallBack")
     public String testServer(){
-        return restTemplate.getForEntity("http://learn-service/test", String.class).getBody();
+        return restTemplate.getForEntity("http://provider-service/test", String.class).getBody();
     }
 
     public String testServerFallBack(){
@@ -71,7 +71,7 @@ public class RobbinService {
     @HystrixCommand(commandKey = "commandKey2")
     public Integer openCacheByAnnotation2(@CacheKey Long id){
         //此次结果会被缓存
-        return restTemplate.getForObject("http://learn-service/test/cache", Integer.class);
+        return restTemplate.getForObject("http://provider-service/test/cache", Integer.class);
     }
 
     /**

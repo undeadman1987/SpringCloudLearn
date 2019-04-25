@@ -2,4 +2,4 @@ server:
   port: 8080
 spring:
   application:
-    name: learn-service
+    name: provider-service

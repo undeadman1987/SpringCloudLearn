@@ -1,7 +1,7 @@
 zuul:
   routes:
-    orient-service-url:
-      path: /os-url/**
+    feign-service-url:
+      path: /fs-url/**
       service-id: feign-customer
     ribbon-service-url:
       path: /rs-url/**
