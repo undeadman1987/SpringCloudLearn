@@ -5,6 +5,6 @@ spring:
         - id: provider-service
           uri: lb://provider-service
           predicates:
-            - Path=/to_client/** # 如果请求地址满足/to_client/**,则转发到 service-client 服务
+            - Path=/to-client/** # 如果请求地址满足/to-client/**,则转发到 service-client 服务
           filters:
-            - StripPrefix=1 # 去除请求地址中的to_client
+            - StripPrefix=1 # 去除请求地址中的to-client前缀
