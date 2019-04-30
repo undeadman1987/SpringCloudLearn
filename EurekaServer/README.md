@@ -14,6 +14,7 @@ ZuulGateway:9004
 
 ConfigServer:9005
 
+CloudGateway:9006
 
 
 注册中心url
