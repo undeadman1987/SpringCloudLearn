@@ -1,0 +1,17 @@
+server:
+  port: 9007
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
+zipkin:
+  collector:
+    rabbitmq:
+      addresses: 192.168.80.132:5672
+      password: admin
+      username: admin
+      queue: zipkin
+spring:
+  application:
+    name: zipkin-server-stream

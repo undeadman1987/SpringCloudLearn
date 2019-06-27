@@ -3,3 +3,8 @@ server:
 spring:
   application:
     name: feign-customer
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://localhost:9999/

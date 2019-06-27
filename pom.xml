@@ -53,6 +53,7 @@
         <module>RobbinCustomer</module>
         <module>Turbine</module>
         <module>ZuulGateway</module>
+        <module>ZipkinServer</module>
     </modules>
 
 </project>
