@@ -35,15 +35,15 @@ public class TestController implements HelloInterface {
     @GetMapping(value = "/test")
     public String testClient(){
         for( String s :  client.getServices()){
-            System.out.println("services " + s);
+            logger.info("services " + s);
             List<ServiceInstance> serviceInstances =  client.getInstances(s);
             for(ServiceInstance si : serviceInstances){
-                System.out.println("services:" + s + ":getHost()=" + si.getHost());
-                System.out.println("services:" + s + ":getPort()=" + si.getPort());
-                System.out.println("services:" + s + ":getServiceId()=" + si.getServiceId());
-                System.out.println("services:" + s + ":getUri()=" + si.getUri());
-                System.out.println("services:" + s + ":getMetadata()=" + si.getMetadata());
-                System.out.println("--------------------------");
+                logger.info("services:" + s + ":getHost()=" + si.getHost());
+                logger.info("services:" + s + ":getPort()=" + si.getPort());
+                logger.info("services:" + s + ":getServiceId()=" + si.getServiceId());
+                logger.info("services:" + s + ":getUri()=" + si.getUri());
+                logger.info("services:" + s + ":getMetadata()=" + si.getMetadata());
+                logger.info("--------------------------");
             }
 
         }
